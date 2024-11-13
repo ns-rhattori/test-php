@@ -1,6 +1,6 @@
 <?php
 
-echo "hello";
+echo "hello " . $_GET['name'] . '!!';
 
 // singleton
 include_once './lib/singleton/singleton.php';
