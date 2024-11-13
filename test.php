@@ -1,6 +1,18 @@
 <?php
 
-echo "hello " . $_GET['name'] . '!!';
+// query param validation
+$name = $_GET['name'];
+$isValid = false;
+if (!empty($name) && preg_match('/[a-z0-9]+/', $name)) {
+    $isValid = true;
+}
+
+if (!$isValid) {
+    echo 'error name !!';
+    exit();
+}
+
+echo "hello " . $name . '!!';
 
 // singleton
 include_once './lib/singleton/singleton.php';
