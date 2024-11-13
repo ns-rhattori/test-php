@@ -33,3 +33,10 @@ include_once './lib/NullObject/nulllogger.php';
 
 $service = new Service(new NullLogger());
 $service->doSomething();
+
+// factory
+include_once './lib/Factory/SimpleFactory.php';
+include_once './lib/Factory/Bicycle.php'
+$factory = new SimpleFactory();
+$bicycle = $factory->createBicycle();
+$bicycle->driveTo('熱海');
