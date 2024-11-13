@@ -3,7 +3,7 @@
 // query param validation
 $name = $_GET['name'];
 $isValid = false;
-if (!empty($name) && preg_match('/[a-z0-9]+/', $name)) {
+if (!empty($name) && preg_match('/[a-z0-9\-\.\@]/', $name) && mb_strlen($name) < 100) {
     $isValid = true;
 }
 
