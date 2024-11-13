@@ -12,7 +12,7 @@ if (!$isValid) {
     exit();
 }
 
-echo "hello " . $name . '!!';
+echo "hello " . htmlspecialchars($name) . '!!';
 
 // singleton
 include_once './lib/singleton/singleton.php';
