@@ -40,3 +40,10 @@ include_once './lib/Factory/Bicycle.php'
 $factory = new SimpleFactory();
 $bicycle = $factory->createBicycle();
 $bicycle->driveTo('熱海');
+
+// PHP7以降では使用できない関数・文法たち
+include_once './lib/DepricateFunctions/DepricateFunctions.php';
+
+$depricatedClass = new DepricateFunctions();
+$depricatedClass->isMatch('1234abc');
+DepricateFunctions::nonStaticMethod();
