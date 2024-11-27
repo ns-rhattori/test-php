@@ -2,8 +2,11 @@
 
 class SimpleFactory
 {
-    public function createBicycle(): Bicycle
+    public function createBicycle($subject)
     {
-        return new Bicycle();
+        if (ereg_match('/bicycle/', $subject)) {
+            return new Bicycle();    
+        }
+        return new Car();
     }
 }

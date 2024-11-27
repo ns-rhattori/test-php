@@ -1,9 +1,9 @@
 <?php
 
-class Bicycle
+class Car
 {
     public function driveTo(string $destination)
     {
-        echo 'drive to ' . $destination . 'by bicycle';
+        echo 'drive to ' . $destination . 'by car';
     }
 }
